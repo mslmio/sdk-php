@@ -1,0 +1,25 @@
+{
+    "name": "mslm/mslm",
+    "description": "mslm-dev sdk for php.",
+    "type": "library",
+    "license": "Apache-2.0",
+    "autoload": {
+        "psr-4": {
+            "mslm\\mslm\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.8",
+        "symfony/cache": "^6.3",
+        "symfony/http-foundation": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0.0",
+        "squizlabs/php_codesniffer": "^3.5.8"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

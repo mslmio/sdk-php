@@ -17,8 +17,6 @@ class EmailVerificationClient
        ];
        $url .= '?' . http_build_query($qp);
 
-       echo $url;
-
        // Make an HTTP request using GuzzleHttp.
        $client = new Client();
        $response = $client->get($url);

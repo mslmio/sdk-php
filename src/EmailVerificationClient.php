@@ -31,7 +31,7 @@ class EmailVerificationClient
         $http_client = $opts['http_client'] ?? $this->http_client;
         $user_agent = $opts['user_agent'] ?? $this->user_agent;
         $base_url = $opts['base_url'] ?? $this->base_url;
-        $apiKey = $opts['apikey'] ?? $apiKey;
+        $apiKey =  $apiKey ?? $this->apikey;
 
        $url = $base_url . '/api/sv/v1/';
        $qp = [
@@ -39,6 +39,8 @@ class EmailVerificationClient
            'apikey' => $apiKey,
        ];
        $url .= '?' . http_build_query($qp);
+
+       echo $url;
 
        $response = $http_client->get($url);
 
